@@ -1,0 +1,6 @@
+Build X_dev.npy file with following commands:
+
+$ cd \XY_dev
+$ cat X_dev.npy.tar.gza* > X_dev.npy.tar.gz
+
+$ tar -zxvf X_dev.npy.tar.gz
