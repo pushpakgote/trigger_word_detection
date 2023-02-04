@@ -17,5 +17,22 @@ What really is an audio recording?
 * In  order to help our sequence model more easily learn to detect trigger words, we will compute a *spectrogram* of the audio. 
 * The spectrogram tells us how much different frequencies are present in an audio clip at any moment in time. 
 
+
+### Building the Model
+
+Our goal is to build a network that will ingest a spectrogram and output a signal when it detects the trigger word. This network will use 4 layers:
+
+    * A convolutional layer
+    
+    * Two GRU layers
+    
+    * A dense layer. 
+
+Here is the architecture we will use.
+
+<img src="images/model.png" style="width:600px;height:600px;">
+
+Output at each timestamp is probability of output being 1.
+
 #### Insert a chime to acknowledge the "activate" trigger
-* Once you've estimated the probability of having detected the word "activate" at each output step, you can trigger a "chiming" sound to play when the probability is above a certain threshold. 
+* Once we've estimated the probability of having detected the word "activate" at each output step, we can trigger a "chiming" sound to play when the probability is above a certain threshold. 
